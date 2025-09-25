@@ -17,10 +17,10 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Введіть кількість чисел Лукаса(N) ");
-        int n = sc.nextInt();
+        int kilkistchysellucasa = sc.nextInt();
         sc.nextLine();
 
-        if (n < 0||n>91) {
+        if (kilkistchysellucasa < 0||kilkistchysellucasa>91) {
             throw new IllegalArgumentException("N має бути >= 0 і <=91");
         }
 
@@ -28,7 +28,7 @@ public class Main {
         int figure = sc.nextInt();
 
         ArrayList<LucasNumber> numbers;
-        numbers = LucasNumber.generate(n, figure);
+        numbers = LucasNumber.generate(kilkistchysellucasa, figure);
 
 
         System.out.println("\nЧисла лукаса, які закінчуються на цифру "+figure );

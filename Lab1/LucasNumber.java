@@ -36,8 +36,8 @@ public class LucasNumber {
      * lastDigit цифра від 0 до 9, на яку повинні закінчуватися числа
      * повертає список знайдених LucasNumber
      */
-    public static ArrayList<LucasNumber> generate(int count, int lastDigit) {
-        if (lastDigit < 0 || lastDigit > 9) {
+    public static ArrayList<LucasNumber> generate(int count, int ostanniacyfra) {
+        if (ostanniacyfra < 0 || ostanniacyfra > 9) {
             throw new IllegalArgumentException("Остання цифра має бути між 0 і 9");
         }
 
@@ -68,7 +68,7 @@ public class LucasNumber {
 
             }
 
-            if (lucasValue % 10 == lastDigit) {
+            if (lucasValue % 10 == ostanniacyfra) {
                 lucasNumbers.add(new LucasNumber(lucasValue, position));
             }
 
